@@ -1,3 +1,4 @@
+
 <!-- Button to open the modal login form -->
 <button onclick = "document.getElementById('id01').style.display = 'block' ">Login
 </button>
@@ -33,6 +34,17 @@
         class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href = "#">password?</a></span>
       </div>
-      
+
      </form>
   </div>
+
+  <script>
+      //Get the modal
+      var modal = document.getElementById('id01');
+      //When the user clicks outside of the modal, close it
+      window.onclick = function(event){
+          if (event.target == modal){
+              modal.style.display = "none";
+          }
+      }
+  </script>
