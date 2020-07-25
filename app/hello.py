@@ -6,6 +6,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
+#testing
+
 class Food(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     groceryName = db.Column(db.String(200), unique=True, nullable=False)
