@@ -1,5 +1,6 @@
 from flask import render_template, url_for, request, redirect
 from app import app
+from app.models import User, Food
 #handlers for managing URLs
 
 @app.route('/login')
