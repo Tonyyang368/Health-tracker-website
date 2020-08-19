@@ -3,5 +3,29 @@
   <div class="home">
     <h1>Healthier choices for broke ass students</h1>
     <p>Created by Tony and Ian.</p>
+    <table>
+      <tr>
+        <th>Food</th>
+        <th>Added</th>
+        <th>Actions</th>
+      </tr>
+      {% for food in foods %}
+        <tr>
+          <td>{{ food.groceryName }}</td>
+          <td>{{ food.data_created.date() }}</td>
+          <td>
+            <a href="/delete/{{food.id}}">Delete</a>
+            <br> 
+            <a href="">Quantity</a>
+          </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <form action="/" method="POST">
+      <input type="text" name="content" id="content" required>
+      <input type="submit" value="Add Food">
+    </form>
+
   </div>
 {% endblock %}
