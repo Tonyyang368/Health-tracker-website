@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h1>Sign In</h1>
-    <form action="" method="POST" novalidate>
+<h1>Register</h1>
+    <form action="" method="POST">
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
@@ -12,8 +12,10 @@
             {{ form.password.label }}<br>
             {{ form.password(size=32) }}
         </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>
+            {{ form.confirm.label }}<br>
+            {{ form.confirm(size=32) }}
+        </p>
         <p>{{ form.submit() }}</p>
     </form>
-    <li><a href="{{ url_for('register') }}">New user? Register here!</a></li>
 {% endblock %}
